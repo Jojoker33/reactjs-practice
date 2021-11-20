@@ -1,6 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+function CustomExample() {
+    return (
+        <>
+            <span> this an example of custom component</span>
+            <ComplexElt subject='JSX' />
+        </>);
+}
+
+function ComplexElt(subject) {
+    console.log(subject);
+    return React.createElement('div', { style: { color: 'green' } }, `The subject of this part is ${subject.subject}`);
+}
+
 function HelloWorld() {
     const name = 'traveler';
     /*
@@ -20,8 +33,8 @@ function HelloWorld() {
     return React.createElement('div', null,
         React.createElement('h1', null,
             'Hi ', name.toLocaleUpperCase(), ' !'
-        )
-
+        ),
+        React.createElement(CustomExample)
     );
 }
 
