@@ -9,8 +9,8 @@ const mockTweet = {
     message: 'React is not that bad.',
     gravatar: 'xyz',
     author: {
-        handle: '@jojoker33',
-        name: 'SaNd'
+        handle: '@TwitterHandle',
+        name: 'name'
 
     },
     likes: 0,
