@@ -23,3 +23,9 @@ padding-left: 4px;
 .file-icon .fa-folder {
 color: #508fca;
 }
+
+.commit-message {
+max-width: 442px;
+padding-left: 10px;
+overflow: hidden;
+}
