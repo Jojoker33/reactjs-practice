@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const LikeButton = ({ count }) => (
     <span className="like-button">
@@ -6,3 +7,7 @@ export const LikeButton = ({ count }) => (
         {count > 0 && <span className='like-count'>{count}</span>}
     </span>
 );
+
+LikeButton.propTypes = {
+    count: PropTypes.number
+};

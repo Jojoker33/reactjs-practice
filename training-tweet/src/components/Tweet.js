@@ -15,7 +15,7 @@ export default function Tweet({ tweet }) {
         <div className='tweet'>
             <Avatar hash={tweet.gravatar} />
             <div className="content">
-                <Author name={tweet.author.name} handle={tweet.author.handle} />
+                <Author author={tweet.author} />
                 <Time time={tweet.timestamp} />
                 <Message text={tweet.message} />
                 <div className="buttons">

@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 function getRetweetCount(count) {
     if (count <= 0) {
         return null;
@@ -11,4 +14,9 @@ export const RetweetButton = ({ count }) => {
         {getRetweetCount(count)}
     </span>
     );
+};
+
+RetweetButton.propTypes = {
+    count: PropTypes.number,
+
 };
