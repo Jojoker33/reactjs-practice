@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const IconButton = ({}) => (
+const IconButton = ({ children }) => (
   <button>
-    <i className="fa fa-cloud"> Hello</i>
+    <i className="fa fa-cloud"> {children} </i>
   </button>
 );
 
 const App = () => (
   <>
-    <IconButton />
+    <IconButton>dynamic rendering</IconButton>
   </>
 );
 
