@@ -4,6 +4,7 @@ import { Child } from "./Child";
 //
 export default class CountingParent extends React.Component {
   /*
+    // Constructo version
     constructor(props) {
     super(props);
     this.state = {
@@ -13,13 +14,9 @@ export default class CountingParent extends React.Component {
     //By returning the function in the render function, the this context is lost
     this.handleAction = this.handleAction.bind(this);
     this.reset = this.reset.bind(this);
-  } */
-
-  // Correct way
-  state = {
-    actionCount: 0,
-  };
-
+  } 
+  
+  
   handleAction = (action) => {
     this.setState({
       actionCount: this.state.actionCount + 1,
@@ -31,6 +28,24 @@ export default class CountingParent extends React.Component {
       actionCount: 0,
     });
   };
+  
+  */
+
+  // Correct way
+  state = {
+    actionCount: 0,
+  };
+
+  handleAction = (action) => {
+    this.setState((previousState) => {
+      return { actionCount: previousState.actionCount + 1 };
+    });
+  };
+
+  reset = (action) =>
+    this.setState((previousState) => {
+      return { actionCount: 0 };
+    });
 
   render() {
     return (
