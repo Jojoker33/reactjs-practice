@@ -6,6 +6,10 @@ const UpdateTitle = () => {
   const [number, setNumber] = useState(0);
 
   // second args which is an array is used to specify which changes affect the effect
+  /**
+   * We shouldn't change anything oustide the scope component
+   * by putting the change in the useEffect hook we can wait to set the changes until react is ready
+   */
   useEffect(() => {
     document.title = name;
   }, [name]);
