@@ -15,7 +15,7 @@ const reducer = (state, action) => {
 };
 
 const Room = () => {
-  const [light, dispatch] = useReducer(reducer, true);
+  const [light, dispatch] = useReducer(reducer, true); // reminder !!! https://reactjs.org/docs/hooks-reference.html#usereducer
   return (
     <div className={`${light ? "lit" : "unlit"}`}>
       <h1>Room</h1>
@@ -23,6 +23,6 @@ const Room = () => {
       <button onClick={() => dispatch("off")}>Off</button>
     </div>
   );
-};
+};;
 
 ReactDOM.render(<Room />, document.querySelector("#root"));
