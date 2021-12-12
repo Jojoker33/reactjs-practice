@@ -1,0 +1,32 @@
+.unlit {
+    background-color: grey;
+}
+
+.unlit h1 {
+    color: white;
+}
+
+.lit  {
+    background-color: white;
+    
+}
+
+.lit h1 {
+    color: goldenrod;
+}
+
+/*
+*    Css examples from https://www.w3schools.com/css/css3_buttons.asp
+*/
+button {
+    background-color: cornflowerblue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
