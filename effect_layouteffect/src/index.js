@@ -9,7 +9,7 @@ const TwoStageRender = () => {
    */
   //useEffect(() => {
 
-  // Warning : will block rendering so prioritize useEffect
+  // Warning : will block the rendering in order to be excuted,  so prioritize useEffect
   useLayoutEffect(() => {
     if (value === 0) {
       setValue(10 + Math.random() * 200);
